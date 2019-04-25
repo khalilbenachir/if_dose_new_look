@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Animation smalltobig, btta, btta2;
     private TextView textView, subtitle_header;
     private Button button;
-    private EditText editText, editText2;
+    private EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,15 +27,14 @@ public class MainActivity extends AppCompatActivity {
         btta = AnimationUtils.loadAnimation(this, R.anim.btta);
         btta2 = AnimationUtils.loadAnimation(this, R.anim.btta2);
 
-        imageView = findViewById(R.id.imageView);
+        imageView = findViewById(R.id.imageViewBlood);
 
-        textView = findViewById(R.id.textView);
+        textView = findViewById(R.id.textViewWelcome);
         subtitle_header = findViewById(R.id.subtitle_header);
 
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.buttonLogin);
 
-        editText = findViewById(R.id.editText);
-        editText2 = findViewById(R.id.editText2);
+        editText = findViewById(R.id.editTextPassword);
 
         // passing animation and start it
         imageView.startAnimation(smalltobig);
@@ -46,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         button.startAnimation(btta2);
 
         editText.startAnimation(btta2);
-        editText2.startAnimation(btta2);
 
 
     }
