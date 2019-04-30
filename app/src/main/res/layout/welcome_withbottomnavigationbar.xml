@@ -496,8 +496,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="50dp"
-                        android:gravity="center_horizontal"
                         android:buttonTint="#7059FF"
+                        android:gravity="center_horizontal"
                         android:text="متوسطة"
                         android:textSize="22dp" />
 
@@ -506,8 +506,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="80dp"
-                        android:gravity="center_horizontal"
                         android:buttonTint="#7059FF"
+                        android:gravity="center_horizontal"
                         android:text="قوية"
                         android:textSize="22dp" />
 
@@ -534,7 +534,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/radioGroup"
                 app:layout_constraintVertical_bias="0.0" />
-
 
 
         </android.support.constraint.ConstraintLayout>
