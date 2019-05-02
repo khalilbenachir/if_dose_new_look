@@ -12,8 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alignmentMode="alignBounds"
-        android:layout_marginBottom="80dp"
-        android:useDefaultMargins="true">
+        android:useDefaultMargins="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="40dp">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -29,6 +30,7 @@
                 android:layout_height="270dp"
                 android:background="@drawable/welcome_header"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -303,7 +305,9 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/food_text_input">
@@ -377,21 +381,51 @@
             </LinearLayout>
 
             <RelativeLayout
-                android:id="@+id/relativeLayout"
-                android:layout_width="wrap_content"
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="8dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="787dp">
 
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+                <Button
+                    android:id="@+id/buttonLogin"
+                    android:layout_width="370dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="27dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_btn_primary"
+                    android:gravity="center"
+                    android:text="اضف الاكلة"
+                    android:textAllCaps="false"
+                    android:textColor="#80744B"
+                    android:textSize="22sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="408dp"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="894dp">
 
                 <TextView
                     android:id="@+id/SHowFood"
                     android:layout_width="370dp"
                     android:layout_height="50dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@drawable/bg_fieldinput"
                     android:gravity="center"
                     android:text="الماكولات"
@@ -421,11 +455,12 @@
                 android:layout_width="370dp"
                 android:layout_height="176dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="8dp"
                 android:divider="@color/colorPrimaryDark"
                 android:dividerHeight="1dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
@@ -441,23 +476,25 @@
                 android:textColor="#fff"
                 android:textSize="22dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.48"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="1071dp" />
+                tools:layout_editor_absoluteY="1145dp" />
 
             <RadioGroup
                 android:id="@+id/radioGroup"
                 android:layout_width="370dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.52"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="1160dp">
+                app:layout_constraintTop_toBottomOf="@+id/textViewActivity">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="374dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
@@ -521,7 +558,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="80dp"
                 android:background="@drawable/bg_btn_primary"
                 android:gravity="center"
                 android:text="احسب الآن"
@@ -530,28 +567,28 @@
                 android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintHorizontal_bias="0.48"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="1.0" />
 
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v4.widget.NestedScrollView>
 
 
-        <com.tbuonomo.morphbottomnavigation.MorphBottomNavigationView
-            android:id="@+id/bottomNavigationView"
-            style="@style/BottomNavigationView"
-            android:layout_width="match_parent"
-            android:layout_height="77dp"
-            app:backgroundTint="#807EFF"
-            app:itemIconTint="#fff"
-            app:itemTextColor="#fff"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:menu="@menu/menu_items"
-            app:morphCornerRadius="128dp"
-            app:morphItemRadius="64dp"
-            app:morphVerticalOffset="8dp" />
+    <com.tbuonomo.morphbottomnavigation.MorphBottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        style="@style/BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:backgroundTint="#807EFF"
+        app:itemIconTint="#fff"
+        app:itemTextColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_items"
+        app:morphCornerRadius="128dp"
+        app:morphItemRadius="64dp"
+        app:morphVerticalOffset="8dp" />
 
 </android.support.constraint.ConstraintLayout>
